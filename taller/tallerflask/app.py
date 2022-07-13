@@ -16,10 +16,12 @@ def losEdificios():
     """
     r = requests.get("http://127.0.0.1:8000/api/edificio/",
                      auth=(user, password))
+    print(r.content)
+    # print(json.loads(r.content).keys)
     edificios = json.loads(r.content)['results']
     nroEdificios = json.loads(r.content)['count']
     return render_template("losEdificios.html", edificios=edificios,
-                           nroEdificios=nroEdificios)
+        nroEdificios=nroEdificios)
 
 
 @app.route("/losDepartamentos")
