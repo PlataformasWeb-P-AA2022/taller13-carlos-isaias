@@ -1,12 +1,9 @@
 from flask import Flask, render_template
 import requests
 import json
-
 from config import user, password
 
-
 app = Flask(__name__, template_folder='templates')
-
 
 @app.route("/")
 def hello_world():

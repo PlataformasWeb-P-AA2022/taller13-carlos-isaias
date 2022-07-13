@@ -16,14 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
-<<<<<<< HEAD
 from django.conf.urls import include
-=======
-from django.conf.urls import include# url
->>>>>>> 4a2860289788f49688cfe6e5cf863bc06fcfd1d3
 
 from rest_framework import routers
-from administrativo import views, urls 
+from administrativo import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
